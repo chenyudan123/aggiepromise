@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="story">
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow"><a href="{{ '/stories/' | relative_url }}">Stories</a>{% if page.date %} · {{ page.date | date: "%B %Y" }}{% endif %}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+    </div>
+  </header>
+  <div class="wrap page-body prose">
+    {% if page.image %}
+    <figure class="story-figure">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}">
+      {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+    {{ content }}
+    {% if page.consent_note %}<p class="fine-print">{{ page.consent_note }}</p>{% endif %}
+    <p class="back-link"><a href="{{ '/stories/' | relative_url }}">← All stories</a></p>
+  </div>
+</article>

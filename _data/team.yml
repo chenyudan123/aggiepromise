@@ -1,0 +1,13 @@
+# Project team shown on the About page. Add titles, departments, or more people as needed.
+- name: Raymond Samuel, MD, PhD
+  role: Principal Investigator
+  affiliation: North Carolina A&T State University
+- name: Sayed Mostafa, PhD
+  role: Co-Principal Investigator
+  affiliation: North Carolina A&T State University
+- name: Glacia Ethridge, PhD
+  role: Co-Principal Investigator
+  affiliation: South Carolina State University
+- name: Yudan Chen, PhD
+  role: Former Principal Investigator
+  affiliation: Augusta University

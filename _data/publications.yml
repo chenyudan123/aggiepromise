@@ -1,0 +1,71 @@
+# Publications and working papers (newest first).
+# Working papers are separate: add them as files in _working_papers/ (see the template there).
+#
+#   type:     Journal article | Working paper | Presentation | Toolkit | Dataset
+#   status:   optional, e.g. "Under review", "In press"
+#   citation: the full reference, APA style
+#   url:      DOI link or a PDF in /files/
+#   summary:  2–3 plain-language sentences about what the study found (Markdown links allowed)
+
+- type: Journal article
+  status: Under review
+  year: 2026
+  citation: >-
+    Chen, Y., Mostafa, S., & Ethridge, G. (under review). A three-month follow-up on the
+    employment outcomes of transitional youth with disabilities. Manuscript submitted to
+    Journal of Vocational Rehabilitation.
+  url: ""
+  summary: >-
+    This study looks at how AggiePromise participants were doing at work three months after
+    joining the study, early in their move from school to employment. A plain-language
+    summary of the findings will be posted once the paper is published.
+
+- type: Journal article
+  year: 2026
+  citation: >-
+    Rose, H., Solomon, V., Geddis, K., Gabriel, W., Blanks, J., Mostafa, S., Ethridge, G.,
+    Eddy, R. M., Luna, R., & Chen, Y. (2026). The AggiePromise Project: Recruitment and
+    retention of youth with disabilities in social science research. Rehabilitation
+    Counselors and Educators Journal, 15(1).
+  url: https://doi.org/10.52017/001c.165065
+  summary: >-
+    This paper explains how our team found and stayed in touch with young people for this
+    study. Working with [NC DHHS: Employment and Independence for People with Disabilities](https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities)
+    (formerly known as the Division of Vocational Rehabilitation Services or DVRS/VR), we
+    enrolled more than 150 youth in the first 14 months. Regular email invitations,
+    partnerships with schools and disability organizations, letting parents help with
+    sign-up, and collecting data via phone interviews, sending personalized reminders, and
+    issuing incentive payments regularly helped keep most participants engaged.
+
+- type: Journal article
+  year: 2023
+  citation: >-
+    Mostafa, S., & Wang, Y. C. (2023). Competitive integrated employment for youth with
+    disabilities: Aligning measurement with conceptualization using latent growth curve
+    modeling. PLoS ONE, 18(11), e0290573.
+  url: https://doi.org/10.1371/journal.pone.0290573
+  summary: >-
+    This study is a secondary analysis of existing national survey data, the National
+    Longitudinal Survey of Youth 1997 (NLSY97). We followed about 1,900 youth with
+    disabilities from high school into their mid-30s. Pay
+    rose steadily for everyone, but work hours went up and down over the years, and how much
+    someone earned had little to do with how many hours they worked. Young people who were
+    female, Black, or had not finished high school by age 20 started with lower pay and
+    fewer hours, and they stayed behind over time. A good job means both fair pay and steady
+    hours, so success should be measured on both over time, not as a single "employed or not"
+    snapshot.
+
+- type: Journal article
+  year: 2022
+  citation: >-
+    Wang, Y. C., & Ethridge, G. (2022). Identifying factors that promote successful
+    vocational rehabilitation case closure: Comparison of individual characteristics, VR
+    experiences and state economic conditions. Journal of Vocational Rehabilitation, 56(2),
+    139–147.
+  url: https://doi.org/10.3233/JVR-221178
+  summary: >-
+    Using national vocational rehabilitation (VR) records from 2015–2017, we asked what helps
+    people leave VR with a job. A state's unemployment and poverty rates made little
+    difference. People who received a wider mix of VR services were more likely to succeed.
+    Women, Black clients, people with physical disabilities, and people who did not have a
+    job when they applied were less likely to, so these groups may need extra support.

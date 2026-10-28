@@ -1,0 +1,28 @@
+---
+title: Stories
+permalink: /stories/
+eyebrow: In their own words
+lede: >-
+  How two young adults with disabilities navigate higher education and work
+wide: true
+---
+
+{% assign stories = site.stories | sort: "date" | reverse %}
+{% assign storycount = stories | size %}
+{% if storycount > 0 %}
+<div class="story-grid">
+  {% for s in stories %}
+  <article class="story-card">
+    {% if s.image %}<img src="{{ s.image | relative_url }}" alt="{{ s.image_alt }}" loading="lazy">{% endif %}
+    <div class="body">
+      <h3><a href="{{ s.url | relative_url }}">{{ s.title }}</a></h3>
+      {% if s.summary %}<p>{{ s.summary }}</p>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<div class="empty-state prose">
+  <p>Stories are coming soon. Two members on the research team will share their accounts of navigating higher education, work, and life while living with disabilities.</p>
+</div>
+{% endif %}

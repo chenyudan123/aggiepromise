@@ -1,0 +1,442 @@
+# North Carolina resource directory for the "For NC Youth and Families" page.
+#
+# To add a resource, copy any item below and edit it.
+#   category:     must match a category id
+#   subcategory:  must match a subcategory id inside that category (or leave blank)
+#   url:          leave blank ("") if there is no link yet; the card will show no button
+#   logo:         optional, path to an image in assets/img/partners/
+#   link_text:    optional, text for the button (defaults to "Visit website")
+
+categories:
+  - id: employment
+    title: Employment and Career Training
+    intro: >-
+      Programs that help youth and young adults explore careers, build job skills,
+      and find and keep work — including North Carolina's vocational rehabilitation program.
+    subcategories:
+      - id: vr-public
+        title: Vocational Rehabilitation & Public Workforce Programs
+      - id: higher-ed
+        title: Community Colleges & Higher Education
+      - id: nonprofit
+        title: Nonprofit Organizations
+  - id: mental-health
+    title: Mental Health and Recovery
+    intro: >-
+      Care for mental health and substance use concerns, from counseling and peer support
+      to crisis and inpatient services.
+    subcategories: []
+  - id: advocacy
+    title: Advocacy and Independent Living
+    intro: >-
+      Help understanding your rights, speaking up for yourself, and building skills for
+      living independently in the community.
+    subcategories: []
+
+entries:
+  # ---------------- Employment: Vocational Rehabilitation & Public Workforce ----------------
+  - name: North Carolina Employment and Independence for People with Disabilities (Vocational Rehabilitation)
+    category: employment
+    subcategory: vr-public
+    region: Statewide
+    audience: Youth and adults with disabilities
+    description: >-
+      North Carolina Employment and Independence for People with Disabilities helps people
+      with disabilities prepare for work, find a job, stay employed, and become more
+      independent. Services may include career counseling, training, job placement,
+      assistive technology, and other support based on the person's employment goals.
+      The program has more than 70 local offices across North Carolina.
+    url: https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities
+    link_text: Visit NC Employment and Independence
+
+  - name: North Carolina Pre-Employment Transition Services
+    category: employment
+    subcategory: vr-public
+    region: Statewide
+    audience: Students with disabilities ages 14 and older
+    description: >-
+      North Carolina's Pre-Employment Transition Services help students with disabilities
+      begin preparing for employment while they are still in high school. Students can
+      explore careers, develop workplace and social skills, and build connections with
+      community resources.
+    url: https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/jobseeker-services/youth-and-student-services
+    link_text: Visit Youth and Student Services
+
+  - name: WorkSource West
+    category: employment
+    subcategory: vr-public
+    region: Morganton and Western North Carolina
+    audience: People with disabilities preparing for employment
+    description: >-
+      WorkSource West helps people with disabilities prepare for employment and greater
+      independence. Students receive classroom instruction, hands-on career training,
+      soft-skills development, and opportunities to gain work experience with local
+      businesses. Eligible participants are referred through North Carolina's vocational
+      rehabilitation program.
+    url: https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/community-rehabilitation-services/worksource-west
+    link_text: Visit WorkSource West
+
+  - name: WorkSource East
+    category: employment
+    subcategory: vr-public
+    region: Goldsboro and Eastern North Carolina
+    audience: People with disabilities preparing for employment
+    description: >-
+      WorkSource East helps people with disabilities build career and independent-living
+      skills. The program combines classroom learning with hands-on career training, work
+      experience, self-advocacy instruction, and support with reading and math. Residential
+      services may also be available for some students.
+    url: https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/community-rehabilitation-services/worksource-east
+    link_text: Visit WorkSource East
+
+  - name: NCWorks — Guilford County
+    category: employment
+    subcategory: vr-public
+    region: Guilford County
+    audience: Young adults and other job seekers
+    description: >-
+      NCWorks helps people in Guilford County prepare for employment and connect with
+      career opportunities. Job seekers can receive help with resumes, career planning,
+      job searches, workshops, and education or training opportunities.
+    url: https://guilfordworks.org/
+    link_text: Visit GuilfordWorks
+
+  - name: NCWorks NextGen Emerging Workforce Career Center
+    category: employment
+    subcategory: vr-public
+    region: Guilford County
+    audience: Young adults ages 16–24
+    description: >-
+      NCWorks NextGen helps young adults prepare for employment, education, and career
+      training. Participants can receive career guidance, develop workplace skills, explore
+      training opportunities, and get help creating a plan for their employment goals.
+    url: https://guilfordworks.org/
+    link_text: Visit GuilfordWorks
+
+  - name: NCWorks Career Center — Alamance County
+    category: employment
+    subcategory: vr-public
+    region: Alamance County
+    audience: Job seekers and people preparing for employment
+    description: >-
+      NCWorks Career Center — Alamance County helps people search for jobs and connect with
+      employment and training resources. Job seekers can receive help with career planning,
+      resumes, assessments, job-search tools, and information about education and workforce
+      training opportunities.
+    url: https://www.ncworks.gov/
+    link_text: Visit NCWorks
+
+  # ---------------- Employment: Higher Education ----------------
+  - name: North Carolina Access to Achievement
+    category: employment
+    subcategory: higher-ed
+    region: Participating community colleges across North Carolina
+    audience: Students with intellectual or developmental disabilities
+    logo: /assets/img/partners/nc-community-colleges.png
+    logo_alt: NC Community Colleges logo
+    description: >-
+      Access to Achievement is a statewide program that helps people with intellectual and
+      developmental disabilities pursue college and prepare for employment. Students can
+      receive help exploring programs, developing career goals, building workforce skills,
+      and connecting with work-based learning opportunities. The program is currently
+      offered at 15 North Carolina community colleges.
+    url: https://www.nccommunitycolleges.edu/access-to-achievement/
+    link_text: Visit Access to Achievement
+
+  - name: Guilford Technical Community College — Career Services
+    category: employment
+    subcategory: higher-ed
+    region: Guilford County
+    audience: Students and adults preparing for careers
+    logo: /assets/img/partners/gtcc.png
+    logo_alt: GTCC logo
+    description: >-
+      Guilford Technical Community College offers education and career training for people
+      preparing to enter the workforce or continue their education. Career Services helps
+      students explore career options, prepare resumes and cover letters, practice
+      interviewing, and connect with employers.
+    url: https://www.gtcc.edu/student-life/student-success-center/career-services/
+    link_text: Visit GTCC Career Services
+
+  - name: GTCC Access to Achievement
+    category: employment
+    subcategory: higher-ed
+    region: Guilford County
+    audience: Students with intellectual or developmental disabilities
+    description: >-
+      GTCC's Access to Achievement program helps students with intellectual and
+      developmental disabilities work toward their education and career goals. Students can
+      get help exploring college programs, connecting with campus resources, building
+      employment skills, and creating a plan based on their strengths and interests.
+      Access to Achievement is part of a statewide program available at 15 North Carolina
+      community colleges.
+    url: https://gtcc.edu/student-life/access-to-achievement/index.php
+    link_text: Visit GTCC Access to Achievement
+
+  - name: GTCC DisAbility Access Services
+    category: employment
+    subcategory: higher-ed
+    region: Guilford County
+    audience: College students with disabilities
+    description: >-
+      GTCC's DisAbility Access Services helps students with disabilities access
+      accommodations and support while attending college. Staff can help students
+      understand the accommodation process, coordinate services, and connect with resources
+      that can make the transition to college easier.
+    url: https://www.gtcc.edu/student-life/disability-services/
+    link_text: Visit GTCC DisAbility Access Services
+
+  - name: Alamance Community College Access to Achievement
+    category: employment
+    subcategory: higher-ed
+    region: Alamance County
+    audience: Students with intellectual or developmental disabilities
+    logo: /assets/img/partners/alamance-cc.png
+    logo_alt: Alamance Community College logo
+    description: >-
+      Alamance Community College participates in North Carolina's Access to Achievement
+      program. The program helps students with intellectual and developmental disabilities
+      explore college options, build skills for employment, and work toward education and
+      career goals. Students can receive individualized support as they plan their next steps.
+    url: https://www.alamancecc.edu/services-and-support/access-to-achievement/index.php
+    link_text: Visit ACC Access to Achievement
+
+  # ---------------- Employment: Nonprofit Organizations ----------------
+  - name: The Arc of Greensboro
+    category: employment
+    subcategory: nonprofit
+    region: Greensboro and Guilford County
+    audience: People with intellectual or developmental disabilities
+    logo: /assets/img/partners/arc-greensboro.png
+    logo_alt: The Arc of Greensboro logo
+    description: >-
+      The Arc of Greensboro helps people with intellectual and developmental disabilities
+      become more independent and involved in their communities. Employment services include
+      help finding jobs, job training, placement, and ongoing support. The organization also
+      provides opportunities for people to build vocational and independent-living skills.
+    url: https://arcg.org/
+    link_text: Visit The Arc of Greensboro
+
+  - name: The Arc of High Point
+    category: employment
+    subcategory: nonprofit
+    region: High Point area
+    audience: People with intellectual or developmental disabilities and their families
+    description: >-
+      The Arc of High Point helps people with intellectual and developmental disabilities
+      become more independent and involved in their communities. Programs include employment
+      support, education, self-advocacy, benefits counseling, workshops, social activities,
+      and future-planning resources for families.
+    url: https://arcofhp.org/
+    link_text: Visit The Arc of High Point
+
+  - name: Triangle Disability and Autism Services
+    category: employment
+    subcategory: nonprofit
+    region: Triangle area
+    audience: Children and adults with intellectual or developmental disabilities
+    logo: /assets/img/partners/triangle-disability-autism.png
+    logo_alt: Triangle Disability and Autism Services logo
+    description: >-
+      Triangle Disability and Autism Services helps children and adults work toward their
+      personal goals. Programs include employment support, day services, counseling,
+      guardianship assistance, community activities, summer programs, and Medicaid-funded
+      services.
+    url: https://triangledisability.org/
+    link_text: Visit Triangle Disability and Autism Services
+
+  - name: LIFESPAN Services
+    category: employment
+    subcategory: nonprofit
+    region: Charlotte and other North Carolina locations
+    audience: Children and adults with intellectual or developmental disabilities
+    description: >-
+      LIFESPAN Services works with people with intellectual and developmental disabilities
+      throughout different stages of life. Its programs focus on education, employment,
+      skill development, creative activities, and community involvement.
+    url: https://www.lifespanservices.org/
+    link_text: Visit LIFESPAN Services
+
+  - name: Triad Goodwill Career Center
+    category: employment
+    subcategory: nonprofit
+    region: Piedmont Triad
+    audience: Job seekers and people preparing for employment
+    description: >-
+      Triad Goodwill Career Center helps people prepare for employment and work toward their
+      career goals. Services include career coaching, help with resumes and interviews,
+      job-search assistance, computer access, and connections to hiring events and other
+      employment resources.
+    url: https://www.triadgoodwill.org/
+    link_text: Visit Triad Goodwill
+
+  - name: Easterseals PORT Health Employment Services
+    category: employment
+    subcategory: nonprofit
+    region: North Carolina
+    audience: People with disabilities seeking employment
+    description: >-
+      Easterseals PORT Health provides employment support for people with disabilities who
+      want to find and maintain a job. Depending on the program and location, support may
+      include career planning, help finding employment, job coaching, and assistance
+      adjusting to the workplace.
+    url: https://eastersealsport.com/
+    link_text: Visit Easterseals PORT Health
+
+  - name: Industries of the Blind
+    category: employment
+    subcategory: nonprofit
+    region: Greensboro
+    audience: People who are blind or visually impaired
+    description: >-
+      Industries of the Blind creates employment opportunities for people who are blind or
+      visually impaired. Its Greensboro operations provide opportunities to develop workplace
+      skills and participate in areas such as manufacturing, packaging, assembly,
+      warehousing, and distribution.
+    url: https://industriesoftheblind.com/
+    link_text: Visit Industries of the Blind
+
+  # ---------------- Mental Health and Recovery ----------------
+  - name: North Carolina Certified Community Behavioral Health Clinics
+    category: mental-health
+    region: Statewide directory
+    audience: All ages
+    description: >-
+      Certified Community Behavioral Health Clinics bring several types of care together in
+      one place. Depending on the location, services may include crisis care, outpatient
+      mental health and substance use treatment, family support, peer services, psychiatric
+      rehabilitation, and care coordination. The state's directory can help families find
+      participating clinics across North Carolina.
+    url: https://www.ncdhhs.gov/divisions/mental-health-developmental-disabilities-and-substance-use-services/certified-community-behavioral-health-clinics
+    link_text: Find a North Carolina clinic
+
+  - name: Charlie Health
+    category: mental-health
+    region: Virtual services across North Carolina
+    audience: Children, teens, adults, and families
+    description: >-
+      Charlie Health offers virtual mental health treatment for people who need more support
+      than a weekly therapy appointment but do not need inpatient care. Its intensive
+      outpatient programs include group sessions, individual therapy, and family therapy
+      that can be completed from home.
+    url: https://www.charliehealth.com/locations/north-carolina
+    link_text: Visit Charlie Health's North Carolina page
+
+  - name: MAHEC Center for Psychiatry and Mental Wellness
+    category: mental-health
+    region: Western North Carolina
+    audience: Children, teens, adults, and families
+    description: >-
+      MAHEC supports children, teens, and adults experiencing mental health or substance use
+      concerns. Services include therapy, medication management, peer support, school-based
+      therapy, and support for people with intellectual and developmental disabilities.
+      In-person and virtual appointments may be available.
+    url: https://mahec.net/psychiatry
+    link_text: Visit MAHEC
+
+  - name: Western North Carolina Community Health Services
+    category: mental-health
+    region: Western North Carolina
+    audience: All ages
+    description: >-
+      Western North Carolina Community Health Services helps people manage concerns such as
+      anxiety, depression, ADHD, grief, trauma, and substance use. Counseling, medication
+      management, peer support, and crisis support are available for children and adults.
+      A sliding discount program may help make care more affordable.
+    url: https://www.wncchs.org/behavioral-health
+    link_text: Visit WNC Community Health Services
+
+  - name: Anuvia Prevention and Recovery Center
+    category: mental-health
+    region: Charlotte area
+    audience: Youth, adults, and families
+    description: >-
+      Anuvia supports people dealing with mental health and substance use challenges. The
+      organization offers counseling, assessments, detox, residential treatment, outpatient
+      care, recovery support, and prevention programs for youth and families.
+    url: https://www.anuvia.org/
+    link_text: Visit Anuvia
+
+  - name: B and D Integrated Health Services
+    category: mental-health
+    region: Central North Carolina
+    audience: Children, teens, adults, and families
+    description: >-
+      B and D offers mental health care, substance use treatment, primary care, therapy,
+      medication support, peer support, and care coordination. The organization has offices
+      in Durham and Wake Forest and also provides community-based services in several
+      nearby counties.
+    url: https://bdintegratedhealth.com/
+    link_text: Visit B and D Integrated Health Services
+
+  - name: UNC Health Johnston Mental Health Services
+    category: mental-health
+    region: Smithfield
+    audience: Adults and families
+    description: >-
+      UNC Health Johnston provides short-term inpatient care for adults experiencing a
+      serious mental health crisis. Patients receive psychiatric care, counseling, medication
+      education, coping-skills support, and help creating a plan for continued care after
+      leaving the hospital.
+    url: https://www.unchealthjohnston.org/care-treatment/mental-health/
+    link_text: Visit UNC Health Johnston
+
+  - name: ECU Health Adult Behavioral Health Inpatient Unit
+    category: mental-health
+    region: Eastern North Carolina
+    audience: Adults and families
+    description: >-
+      ECU Health's Ahoskie location provides 24-hour inpatient behavioral health care for
+      adults who need hospital-level support. Individuals and families can contact the unit
+      to ask about admission, available treatment, and referral requirements.
+    url: https://locations.ecuhealth.org/Details/165?Type=3&Index=1
+    link_text: Visit ECU Health's Ahoskie location
+
+  # ---------------- Advocacy and Independent Living ----------------
+  - name: Disability Advocacy Center
+    category: advocacy
+    region: Piedmont Triad
+    audience: People with disabilities and their families
+    description: >-
+      The Disability Advocacy Center helps people with disabilities understand their rights
+      and become more independent. Services include advocacy, information and referrals,
+      independent-living skills training, peer support, benefits assistance, and help for
+      youth transitioning into adulthood.
+    url: https://dac-cil.org/
+    link_text: Visit the Disability Advocacy Center
+
+  - name: North Carolina Independent Living Program
+    category: advocacy
+    region: Statewide
+    audience: People with disabilities seeking greater independence
+    description: >-
+      North Carolina's Independent Living Program helps eligible people with disabilities
+      work toward their personal goals for living and participating in the community.
+      Support may include independent-living skills training, assistive tools, advocacy,
+      service-animal information, and connections to local programs.
+    url: https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/independent-living-people-disabilities
+    link_text: Visit the NC Independent Living Program
+
+  - name: North Carolina Council on Developmental Disabilities
+    category: advocacy
+    region: Statewide
+    audience: People with intellectual or developmental disabilities, families, and advocates
+    description: >-
+      The North Carolina Council on Developmental Disabilities works to improve
+      opportunities, policies, and services for people with intellectual and developmental
+      disabilities. Its website includes advocacy information, educational events,
+      self-advocacy programs, funding opportunities, and resources for individuals and
+      families.
+    url: https://nccdd.org/
+    link_text: Visit the NC Council on Developmental Disabilities
+
+  - name: Able Care Corporation
+    category: advocacy
+    region: Greensboro and Guilford County
+    audience: Adults with developmental disabilities
+    description: >-
+      Able Care Corporation offers residential and daytime support for adults with
+      developmental disabilities. Its programs help participants build daily-living skills,
+      take part in their communities, and become as independent as possible.
+    url: https://ablecarecorp.com/
+    link_text: Visit Able Care Corporation

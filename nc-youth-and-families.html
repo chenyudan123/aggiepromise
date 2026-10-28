@@ -1,0 +1,116 @@
+---
+title: For NC Youth and Families
+permalink: /nc-youth-and-families/
+eyebrow: Resources
+lede: >-
+  Finding the right support can feel overwhelming, especially when you are not sure where to begin.
+  Start with how vocational rehabilitation works, then browse North Carolina programs for employment,
+  mental health, advocacy, and independent living.
+wide: true
+description: Vocational rehabilitation guide and North Carolina resources for youth with disabilities and their families.
+---
+
+<div class="res-layout" data-resource-directory>
+  <aside class="res-toc" aria-label="On this page">
+    <p>On This Page</p>
+    <ul>
+      <li><a href="#vr-basics">Vocational Rehabilitation, Step by Step</a></li>
+      <li><a href="#pre-ets">Still in High School?</a></li>
+      <li><a href="#directory">Resource Directory</a>
+        <ul>
+          {% for cat in site.data.resources.categories %}
+          <li><a href="#{{ cat.id }}">{{ cat.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <div>
+    <section id="vr-basics" class="prose">
+      <h2 style="margin-top:0">Vocational Rehabilitation, Step by Step</h2>
+      <p>Vocational rehabilitation (VR) is a public program that helps people with disabilities prepare for, find, and keep a job. In North Carolina, VR is run by the Division of <a href="https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities">Employment and Independence for People with Disabilities</a>, with more than 70 local offices. Services are planned around your own goals.</p>
+      <ol class="steps">
+        <li><strong>Reach out to your local office.</strong> You can contact VR yourself, or a teacher, school counselor, doctor, or family member can help you make a referral.</li>
+        <li><strong>Find out if you are eligible.</strong> A VR counselor will talk with you and review information about your disability and how it affects work. Federal rules call for an eligibility decision within 60 days of applying.</li>
+        <li><strong>Build your Individualized Plan for Employment (IPE).</strong> You and your counselor write a plan together. It names your job goal and the services that will help you reach it. You have the right to make informed choices about your plan.</li>
+        <li><strong>Use the services in your plan.</strong> These can include career counseling, training or college support, assistive technology, job coaching, help finding a job, and supported employment.</li>
+        <li><strong>Start working and stay connected.</strong> VR keeps in touch after you start a job to make sure it is going well before your case is closed. You can come back for help later if things change.</li>
+      </ol>
+      <div class="callout">
+        <p class="callout-title">Questions Families Often Ask a VR Counselor</p>
+        <ul>
+          <li>What documents should we bring to the first meeting?</li>
+          <li>How will a job affect benefits such as SSI or Medicaid, and who can do benefits counseling?</li>
+          <li>Can VR help pay for training, college, or assistive technology?</li>
+          <li>What should we do if we disagree with a decision? (North Carolina's Client Assistance Program can help.)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="pre-ets" class="prose">
+      <h2>Still in High School? Start with Pre-Employment Transition Services</h2>
+      <p>Students with disabilities can begin working with VR before they graduate. <a href="https://www.ncdhhs.gov/divisions/employment-and-independence-people-disabilities/jobseeker-services/youth-and-student-services">Pre-Employment Transition Services (Pre-ETS)</a> are available to North Carolina students ages 14 and older and include five core activities:</p>
+      <ul>
+        <li>Job exploration counseling</li>
+        <li>Work-based learning, such as job shadowing and internships</li>
+        <li>Counseling on college and training options after high school</li>
+        <li>Workplace readiness training</li>
+        <li>Instruction in self-advocacy</li>
+      </ul>
+      <p>Tip: ask your school to invite a VR counselor to IEP transition planning meetings so school and adult services are working from the same plan.</p>
+    </section>
+
+    <section id="directory">
+      <h2>North Carolina Resource Directory</h2>
+      <p class="prose">These programs connect youth with disabilities and their families to employment training, mental health care, advocacy, independent living support, and other services across North Carolina.</p>
+
+      <div class="res-tools" hidden>
+        <div>
+          <label for="res-search">Search resources</label>
+          <input id="res-search" type="search" placeholder="Try a county, “autism”, “college”, or “job coaching”" autocomplete="off">
+        </div>
+        <div class="chips" role="group" aria-label="Filter by category">
+          <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+          {% for cat in site.data.resources.categories %}
+          <button type="button" class="chip" data-filter="{{ cat.id }}" aria-pressed="false">{{ cat.title }}</button>
+          {% endfor %}
+        </div>
+        <p class="res-count" aria-live="polite"></p>
+      </div>
+      <p class="res-none empty-state">No resources match your search. Try a different word or choose “All”.</p>
+
+      {% for cat in site.data.resources.categories %}
+      <section class="res-section" id="{{ cat.id }}" aria-labelledby="h-{{ cat.id }}">
+        <h2 id="h-{{ cat.id }}">{{ cat.title }}</h2>
+        <p class="prose">{{ cat.intro }}</p>
+        {% if cat.id == "mental-health" %}
+        <div class="callout"><p><strong>In a crisis?</strong> Call or text <a href="tel:988">988</a> to reach the 988 Suicide &amp; Crisis Lifeline, available 24/7. If someone is in immediate danger, call 911.</p></div>
+        {% endif %}
+
+        {% assign subcount = cat.subcategories | size %}
+        {% if subcount > 0 %}
+          {% for sub in cat.subcategories %}
+          <div class="res-sub">
+            <h3>{{ sub.title }}</h3>
+            <div class="res-grid">
+              {% for r in site.data.resources.entries %}{% if r.category == cat.id and r.subcategory == sub.id %}
+              {% include resource-card.html %}
+              {% endif %}{% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+        {% else %}
+          <div class="res-grid">
+            {% for r in site.data.resources.entries %}{% if r.category == cat.id %}
+            {% include resource-card.html %}
+            {% endif %}{% endfor %}
+          </div>
+        {% endif %}
+      </section>
+      {% endfor %}
+
+      <p class="fine-print" style="margin-top:2.5rem">Listings are shared for information only and do not mean the AggiePromise Project or NIDILRR endorses a program. Services, eligibility, and contact details change; please confirm with each organization. Know a resource we should add? Email <a href="mailto:{{ site.project.email }}">{{ site.project.email }}</a>.</p>
+    </section>
+  </div>
+</div>

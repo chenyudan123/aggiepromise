@@ -1,0 +1,24 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-title">AggiePromise Project</p>
+      <p>{{ site.project.institution }}<br>{{ site.project.address }}</p>
+      <p><a href="mailto:{{ site.project.email }}">{{ site.project.email }}</a> · {{ site.project.phone }}</p>
+    </div>
+    <div>
+      <p class="footer-title">Explore</p>
+      <ul class="footer-links">
+        {% for item in site.data.navigation %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="funding-statement">
+      <p class="footer-title">Funding</p>
+      <p>The contents of this website were developed under a grant from the National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR grant number {{ site.project.grant_number }}). NIDILRR is a Center within the Administration for Community Living (ACL), Department of Health and Human Services (HHS). The contents of this website do not necessarily represent the policy of NIDILRR, ACL, or HHS, and you should not assume endorsement by the Federal Government.</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>Resource listings are provided for information only and do not imply endorsement. Need this content in another format? Email <a href="mailto:{{ site.project.email }}">{{ site.project.email }}</a>.</p>
+  </div>
+</footer>

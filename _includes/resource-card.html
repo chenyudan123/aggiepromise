@@ -1,0 +1,11 @@
+{% comment %} Renders one resource. Expects variable `r` from the loop in nc-youth-and-families.html {% endcomment %}
+<article class="res-card" data-category="{{ r.category }}">
+  {% if r.logo %}<img class="res-logo" src="{{ r.logo | relative_url }}" alt="{{ r.logo_alt }}" loading="lazy">{% endif %}
+  <h4>{{ r.name }}</h4>
+  <div class="res-meta">
+    {% if r.region %}<span><b>Where:</b> {{ r.region }}</span>{% endif %}
+    {% if r.audience %}<span><b>For:</b> {{ r.audience }}</span>{% endif %}
+  </div>
+  <p>{{ r.description }}</p>
+  {% if r.url %}<a class="res-link" href="{{ r.url }}" target="_blank" rel="noopener">{% if r.link_text %}{{ r.link_text }}{% else %}Visit website{% endif %} <span class="ext" aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>{% endif %}
+</article>

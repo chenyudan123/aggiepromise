@@ -1,0 +1,38 @@
+---
+title: What We Have Learned
+permalink: /what-we-have-learned/
+eyebrow: Findings
+---
+
+<div class="prose">
+  <p>The AggiePromise Project asks two connected questions. Each finding below is tied to one of them, with a link to the full paper or brief when one is available.</p>
+</div>
+
+<div class="aims">
+  <div class="aim">
+    <h3>Employment Trajectories</h3>
+    <p>What patterns of employment do youth with disabilities follow in the 18 months after leaving high school, and what personal, family, and workplace factors distinguish successful pathways?</p>
+  </div>
+  <div class="aim">
+    <h3>Lived Experience</h3>
+    <p>What is the first stretch of the school-to-work transition like for youth themselves: the barriers they meet, the supports that help, and the choices they make?</p>
+  </div>
+</div>
+
+<h2>Key Findings</h2>
+{% assign findings = site.findings | sort: "order" %}
+{% assign findcount = findings | size %}
+{% if findcount > 0 %}
+  {% for f in findings %}
+  <article class="finding">
+    {% if f.theme %}<span class="tag">{{ f.theme }}</span>{% endif %}
+    <h3>{{ f.title }}</h3>
+    {{ f.content | markdownify }}
+    {% if f.source %}<p class="meta">Source: {% if f.source_url %}<a href="{{ f.source_url | relative_url }}">{{ f.source }}</a>{% else %}{{ f.source }}{% endif %}</p>{% endif %}
+  </article>
+  {% endfor %}
+{% else %}
+  <div class="empty-state">
+    <p>Findings will be posted here as analyses are completed and published. Check back soon, or see <a href="{{ '/publications/' | relative_url }}">Publications and Working Papers</a> for the latest work.</p>
+  </div>
+{% endif %}

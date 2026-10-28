@@ -1,0 +1,81 @@
+---
+title: Publications and Working Papers
+permalink: /publications/
+eyebrow: Research products
+lede: >-
+  Journal articles, working papers, briefs, and infographics from the AggiePromise Project and related research.
+---
+
+<h2 style="margin-top:0">Journal Articles and Manuscripts</h2>
+<ul class="pub-list">
+  {% for p in site.data.publications %}
+  <li>
+    <span class="tag">{{ p.type }}</span>{% if p.status %}<span class="tag tag-status">{{ p.status }}</span>{% endif %}
+    <p class="pub-citation">{{ p.citation }}{% if p.url %} <a href="{{ p.url }}">{{ p.url }}</a>{% endif %}</p>
+    {% if p.summary %}
+    <div class="pub-summary">
+      {{ p.summary | markdownify }}
+    </div>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+<h2>Working Papers</h2>
+{% assign papers = site.working_papers | sort: "date" | reverse %}
+{% assign papercount = papers | size %}
+{% if papercount > 0 %}
+<ul class="pub-list">
+  {% for w in papers %}
+  <li>
+    <span class="tag">Working paper</span>
+    <div class="pub-title"><a href="{{ w.url | relative_url }}">{{ w.title }}</a></div>
+    <div class="pub-meta">{% if w.authors %}{{ w.authors }} · {% endif %}{{ w.date | date: "%B %Y" }}</div>
+    {% if w.summary %}<p class="pub-summary">{{ w.summary }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<div class="empty-state">
+  <p>Working papers with policy and program recommendations are in development and will be posted here.</p>
+</div>
+{% endif %}
+
+<h2>Briefs</h2>
+{% assign briefcount = site.data.briefs | size %}
+{% if briefcount > 0 %}
+<ul class="pub-list">
+  {% for b in site.data.briefs %}
+  <li>
+    <span class="tag">Brief</span>
+    <div class="pub-title">{% if b.file %}<a href="{{ b.file | relative_url }}">{{ b.title }}</a>{% else %}{{ b.title }}{% endif %}</div>
+    <div class="pub-meta">{{ b.date | date: "%B %Y" }}{% if b.file %} · PDF{% if b.pages %}, {{ b.pages }} pages{% endif %}{% endif %}</div>
+    {% if b.summary %}<div class="pub-summary">{{ b.summary | markdownify }}</div>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<div class="empty-state">
+  <p>Short research briefs for practitioners, families, and policymakers will be posted here.</p>
+</div>
+{% endif %}
+
+<h2>Infographics</h2>
+{% assign infocount = site.data.infographics | size %}
+{% if infocount > 0 %}
+<div class="info-grid">
+  {% for g in site.data.infographics %}
+  <figure class="info-card">
+    <a href="{{ g.image | relative_url }}"><img src="{{ g.image | relative_url }}" alt="{{ g.alt }}" loading="lazy"></a>
+    <figcaption>
+      <span class="info-title">{{ g.title }}</span>
+      <span class="pub-meta">{{ g.date | date: "%B %Y" }}{% if g.pdf %} · <a href="{{ g.pdf | relative_url }}">PDF</a>{% endif %}</span>
+    </figcaption>
+  </figure>
+  {% endfor %}
+</div>
+{% else %}
+<div class="empty-state">
+  <p>Infographics that share key findings at a glance will be posted here.</p>
+</div>
+{% endif %}

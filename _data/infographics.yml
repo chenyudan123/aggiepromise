@@ -1,0 +1,14 @@
+# Infographics. Newest first.
+# Put each image (PNG or JPG) in assets/img/infographics/.
+# Optionally add a PDF version in files/ for printing.
+#
+#   alt:  REQUIRED. Describe the key facts in the graphic so screen-reader users get the same information.
+#
+# Example (remove the leading "# " on each line to use it):
+# - title: Employment after high school at a glance
+#   date: 2026-12-01
+#   image: /assets/img/infographics/employment-at-a-glance.png
+#   alt: Infographic showing ... (write out the main numbers and messages)
+#   pdf: /files/infographics/employment-at-a-glance.pdf
+
+[]
