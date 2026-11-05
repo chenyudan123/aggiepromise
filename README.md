@@ -40,3 +40,8 @@ Requires Ruby. Run `bundle install`, then `bundle exec jekyll serve`, then open 
 - Body text uses Atkinson Hyperlegible, a typeface designed for readers with low vision.
 - Includes a skip link, visible keyboard focus, semantic landmarks, and a menu that works without JavaScript. It also supports dark mode and prints cleanly.
 - Add `alt` text for every image (story photos use `image_alt`).
+
+## Launch checklist (when the site is complete)
+
+- [ ] **Custom domain.** Register a domain for the project and connect it under Settings → Pages → Custom domain. Then set `baseurl: ""` and `url:` in `_config.yml`.
+- [ ] **Visit and click tracking.** Add a privacy-friendly analytics tool to track page views, downloads, and clicks on resource links.

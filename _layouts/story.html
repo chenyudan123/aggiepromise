@@ -6,10 +6,10 @@ layout: default
     <div class="wrap">
       <p class="eyebrow"><a href="{{ '/stories/' | relative_url }}">Stories</a>{% if page.date %} · {{ page.date | date: "%B %Y" }}{% endif %}</p>
       <h1>{{ page.title }}</h1>
-      {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+      {% if page.author %}<p class="story-byline"><strong>{{ page.author }}</strong>{% if page.author_role %}<br>{{ page.author_role }}{% endif %}</p>{% endif %}
     </div>
   </header>
-  <div class="wrap page-body prose">
+  <div class="wrap page-body"><div class="prose">
     {% if page.image %}
     <figure class="story-figure">
       <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}">
@@ -19,5 +19,5 @@ layout: default
     {{ content }}
     {% if page.consent_note %}<p class="fine-print">{{ page.consent_note }}</p>{% endif %}
     <p class="back-link"><a href="{{ '/stories/' | relative_url }}">← All stories</a></p>
-  </div>
+  </div></div>
 </article>

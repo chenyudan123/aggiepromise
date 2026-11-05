@@ -9,14 +9,27 @@ wide: true
 
 {% assign stories = site.stories | sort: "date" | reverse %}
 {% assign storycount = stories | size %}
-{% if storycount > 0 %}
+{% assign upcomingcount = site.data.upcoming_stories | size %}
+{% if storycount > 0 or upcomingcount > 0 %}
 <div class="story-grid">
   {% for s in stories %}
   <article class="story-card">
-    {% if s.image %}<img src="{{ s.image | relative_url }}" alt="{{ s.image_alt }}" loading="lazy">{% endif %}
+    {% if s.image %}<a href="{{ s.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ s.image | relative_url }}" alt="" loading="lazy"></a>{% endif %}
     <div class="body">
+      {% if s.author %}<p class="story-author">{{ s.author }}</p>{% endif %}
       <h3><a href="{{ s.url | relative_url }}">{{ s.title }}</a></h3>
       {% if s.summary %}<p>{{ s.summary }}</p>{% endif %}
+      <a class="story-more" href="{{ s.url | relative_url }}" aria-hidden="true" tabindex="-1">Read the story →</a>
+    </div>
+  </article>
+  {% endfor %}
+  {% for u in site.data.upcoming_stories %}
+  <article class="story-card is-upcoming">
+    <div class="story-placeholder" aria-hidden="true"><span>Coming soon</span></div>
+    <div class="body">
+      <p class="story-author">{{ u.name }}</p>
+      <h3>Story coming soon</h3>
+      {% if u.teaser %}<p>{{ u.teaser }}</p>{% endif %}
     </div>
   </article>
   {% endfor %}

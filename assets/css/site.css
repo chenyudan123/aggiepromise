@@ -225,7 +225,7 @@ p, ul, ol { margin: 0 0 1.1rem; }
 .product p { margin: 0; color: var(--muted); font-size: 1rem; }
 
 /* ---------- Stories ---------- */
-.story-grid { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); margin: 1.5rem 0 2rem; }
+.story-grid { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); margin: 1.5rem 0 2rem; }
 .story-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
 .story-card img { aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
 .story-card .body { padding: 1.2rem 1.3rem 1.4rem; }
@@ -319,3 +319,27 @@ p, ul, ol { margin: 0 0 1.1rem; }
 .info-card img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; background: var(--surface-2); }
 .info-card figcaption { padding: 0.8rem 1rem 1rem; display: flex; flex-direction: column; gap: 0.2rem; }
 .info-title { font-weight: 700; }
+
+/* Stories */
+.story-card img { object-position: center 22%; }
+.story-card .body { display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
+.story-card h3 { margin: 0; line-height: 1.3; }
+.story-author { margin: 0; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted) !important; }
+.story-more { margin-top: auto; padding-top: 0.6rem; font-weight: 700; font-size: 0.98rem; text-decoration: none; }
+.story-placeholder { aspect-ratio: 16 / 10; display: grid; place-items: center; background: var(--surface-2); border-bottom: 1px solid var(--line); }
+.story-placeholder span { font-weight: 700; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border: 2px dashed var(--line); border-radius: 999px; padding: 0.4rem 1rem; }
+.story-card.is-upcoming h3 { color: var(--muted); }
+.story-byline { margin: 0.2rem 0 0; color: var(--hero-muted); font-size: 1rem; line-height: 1.5; }
+.story-byline strong { color: var(--hero-text); font-size: 1.1rem; }
+.story-figure { max-width: 15rem; }
+.story-figure img { border-radius: var(--radius); display: block; }
+
+/* Photos inside a story: beside the text on wide screens, stacked on phones */
+.story-photo { margin: 0.3rem 0 1.4rem; max-width: 22rem; }
+.story-photo img { display: block; width: 100%; border-radius: var(--radius); }
+.story-photo figcaption { font-size: 0.92rem; color: var(--muted); margin-top: 0.45rem; }
+@media (min-width: 820px) {
+  .story-photo { float: right; width: 17rem; margin: 0.4rem 0 1.2rem 1.8rem; }
+  .story .prose h2 { clear: both; }
+  .story .prose { display: flow-root; }
+}
