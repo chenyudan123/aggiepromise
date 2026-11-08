@@ -343,3 +343,11 @@ p, ul, ol { margin: 0 0 1.1rem; }
   .story .prose h2 { clear: both; }
   .story .prose { display: flow-root; }
 }
+
+/* A row of photos inside a story */
+.story-gallery { clear: both; display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 1.6rem 0 1.8rem; }
+.story-gallery figure { margin: 0; }
+.story-gallery img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); }
+.story-gallery figcaption { font-size: 0.88rem; color: var(--muted); margin-top: 0.4rem; }
+@media (max-width: 600px) { .story-gallery { grid-template-columns: 1fr; } .story-gallery img { aspect-ratio: auto; } }
+.story-photo { clear: right; }
